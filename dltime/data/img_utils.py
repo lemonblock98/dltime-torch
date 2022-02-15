@@ -10,6 +10,7 @@ from tqdm import tqdm
 from PIL import Image
 import numpy as np
 
+
 def load_car_data():
 
     transform = transforms.Compose([
@@ -68,13 +69,15 @@ def initialize_weights(net):
         elif isinstance(m, nn.Linear):
             m.weight.data.normal_(0, 0.02)
             m.bias.data.zero_()
-            
+
+
 def show_weights_hist(data):
     plt.hist(data, bins=100, normed=1, facecolor="blue", edgecolor="black", alpha=0.7)
     plt.xlabel("weights")
     plt.ylabel("frequency")
     plt.title("D weights")
     plt.show()
+
 
 if __name__ == '__main__':
     train_dataset = load_car_data()

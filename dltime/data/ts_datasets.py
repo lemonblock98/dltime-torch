@@ -63,6 +63,7 @@ class TS_GENDataset(Dataset):
     def __getitem__(self, index):
         return self.data[index], torch.tensor(self.label)
 
+
 if __name__ == "__main__":
     # x, y = load_UCR_UEA_dataset("ACSF1", return_X_y=True, extract_path="ucr_uea_archive")
     dataset = UCR_UEADataset("Worms", split="train")

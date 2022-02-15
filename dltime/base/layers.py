@@ -75,6 +75,13 @@ class SqueezeExciteBlock(nn.Module):
         return x * y.expand_as(x) # bs, chs, seq_len
 
 
+class MultiheadAttention(nn.Module):
+
+    def __init__(self, embed_dim, num_heads, dropout=0., bias=True):
+        super().__init__()
+        pass
+
+
 # if __name__ == "__main__":
 #     conv1dsame = Conv1dSame(3, 128, ks=12)
 #     x = torch.randn(64, 3, 96)
