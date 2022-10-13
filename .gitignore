@@ -127,3 +127,8 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+soil_disturbance/cam_results
+soil_disturbance/outputs
+soil_disturbance/pickle_data
+soil_disturbance/soil_outputs
